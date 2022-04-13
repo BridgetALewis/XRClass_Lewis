@@ -1,28 +1,52 @@
+
 <!-- include A-Frame obviously -->
 <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+<!-- include ar.js for A-Frame -->
+<!-- <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script> -->
 <!-- include A-Frame extras for animations-->
 <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
-<!-- include for AR stuff-->
+<script
+  src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
+<!-- include gestures -->
+<script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/16/Stats.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/dist/mindar-image.prod.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/dist/mindar-image-aframe.prod.js"></script>
 
 <body>
-    <!-- mindar image loads the mindar file which has computer vision info about the target-->
-    <a-scene mindar-image="imageTargetSrc: https://raw.githubusercontent.com/BridgetALewis/XRClass_Lewis/master/targets.mind;" 
-    color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-      <a-assets>
-        <img id="card" src="https://raw.githubusercontent.com/BridgetALewis/XRClass_Lewis/master/qrcode.png"/>
-        <a-asset-item id="avatarModel" 
-          src="https://raw.githubusercontent.com/BridgetALewis/XRClass_Lewis/master/avatar-wave.glb"></a-asset-item>
-      </a-assets>
+  <a-scene mindar-image="imageTargetSrc: https://raw.githubusercontent.com/BridgetALewis/XRClass_Lewis/master/models/targets.mind;"
+    color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false"
+    device-orientation-permission-ui="enabled: false">
+    <a-assets>
+      <img id="card" src="https://raw.githubusercontent.com/BridgetALewis/XRClass_Lewis/master/models/qrcode.png" />
+      <a-asset-item id="avatarModel"
+        src="https://raw.githubusercontent.com/BridgetALewis/XRClass_Lewis/master/models/avatar-wave.glb"></a-asset-item>
+    </a-assets>
 
-      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+    <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
-      <!-- sets the origin/target-->
-      <a-entity mindar-image-target="targetIndex: 0">
-        <a-entity position="0 -2.5 0" rotation="0 0 0" scale="2.5 2.5 2.5"
-          gltf-model="https://raw.githubusercontent.com/BridgetALewis/XRClass_Lewis/master/avatar-wave.glb" animation-mixer>
-        </a-entity>
-        </a-entity>
-    </a-scene>
-  </body>
+    <a-entity mindar-image-target="targetIndex: 0" -->
+      <a-entity position="0 -1.5 0" rotation="0 0 0" scale="1.5 1.5 1.5"
+        gltf-model="https://raw.githubusercontent.com/BridgetALewis/XRClass_Lewis/master/models/avatar-wave.glb" animation-mixer>
+      </a-entity>
+
+      <!--<a-text value = "Bridget Lewis\n Lead Human Factors Engineer" position = "0 2.3 0" align = "center"></a-text>-->
+
+      <a-entity id="textArea" position="-1.25 2.25 -1" text-geometry="size: 0.25; 
+			height: 0.1;
+			bevelEnabled: true;
+			bevelSize: 0.02;
+			bevelThickness: 0.02;
+			value: JOHN REMMES" material="color: #AAAAFF;">
+      </a-entity>
+      <a-entity id="textArea" position="-1.25 2 -1" text-geometry="size: 0.125; 
+			height: 0.1;
+			bevelEnabled: true;
+			bevelSize: 0.02;
+			bevelThickness: 0.02;
+			value:SENIOR SOFTWARE ENGINEER" material="color: #AAAAFF;">
+      </a-entity>
+    </a-entity>
+
+  </a-scene>
+</body>
