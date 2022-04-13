@@ -14,20 +14,20 @@
 <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/dist/mindar-image-aframe.prod.js"></script>
 
 <body>
-  <a-scene mindar-image="imageTargetSrc: https://raw.githubusercontent.com/BridgetALewis/XRClass_Lewis/master/models/targets.mind;"
+  <a-scene mindar-image="imageTargetSrc: https://raw.githubusercontent.com/BridgetALewis/XRClass_Lewis/master/targets.mind;"
     color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false"
     device-orientation-permission-ui="enabled: false">
     <a-assets>
-      <img id="card" src="https://raw.githubusercontent.com/BridgetALewis/XRClass_Lewis/master/models/qrcode.png" />
+      <img id="card" src="https://raw.githubusercontent.com/BridgetALewis/XRClass_Lewis/master/qrcode.png" />
       <a-asset-item id="avatarModel"
-        src="https://raw.githubusercontent.com/BridgetALewis/XRClass_Lewis/master/models/avatar-wave.glb"></a-asset-item>
+        src="https://raw.githubusercontent.com/BridgetALewis/XRClass_Lewis/master/avatar-wave.glb"></a-asset-item>
     </a-assets>
 
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
     <a-entity mindar-image-target="targetIndex: 0" -->
       <a-entity position="0 -1.5 0" rotation="0 0 0" scale="1.5 1.5 1.5"
-        gltf-model="https://raw.githubusercontent.com/BridgetALewis/XRClass_Lewis/master/models/avatar-wave.glb" animation-mixer>
+        gltf-model="https://raw.githubusercontent.com/BridgetALewis/XRClass_Lewis/master/avatar-wave.glb" animation-mixer>
       </a-entity>
 
       <!--<a-text value = "Bridget Lewis\n Lead Human Factors Engineer" position = "0 2.3 0" align = "center"></a-text>-->
